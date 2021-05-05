@@ -61,23 +61,59 @@ namespace ProjProcesamiento
             System.Windows.Forms.Application.Exit();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e, Image<Bgr, Byte> img)
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            //ref https://stackoverflow.com/questions/32507061/convert-gray-image-to-binary-image-0-1-image-in-c
-            StringBuilder t = new StringBuilder();
-            Bitmap bit = img.ToBitmap();
-            for (int i = 0; i < bit.Width; i++)
+
+            if (checkBox1.Checked)
             {
-                for (int j = 0; j < bit.Height; j++)
+                //ref https://dyclassroom.com/csharp-project/how-to-convert-a-color-image-into-grayscale-image-in-csharp-using-visual-studio
+                StringBuilder t = new StringBuilder();
+                Bitmap bit = image.ToBitmap();
+                //Bitmap newBit = new Bitmap(bit.Width,bit.Height);
+
+                //get image dimension
+                int width = bit.Width;
+                int height = bit.Height;
+
+                //color of pixel
+                Color p;
+
+                //grayscale
+                for (int y = 0; y < height; y++)
                 {
-                    t.Append((bit.GetPixel(i, j).R > 100 && bit.GetPixel(i, j).G > 100 &&
-                             bit.GetPixel(i, j).B > 100) ? 0 : 1);
+                    for (int x = 0; x < width; x++)
+                    {
+                        //get pixel value
+                        p = bit.GetPixel(x, y);
+
+                        //extract pixel component ARGB
+                        int a = p.A;
+                        int r = p.R;
+                        int g = p.G;
+                        int b = p.B;
+
+                        //find average
+                        int avg = (r + g + b) / 3;
+
+                        //set new pixel value
+                        bit.SetPixel(x, y, Color.FromArgb(a, avg, avg, avg));
+                    }
                 }
-                t.AppendLine();
+
+
+                Image<Bgr, Byte> newImage = new Image<Bgr, Byte>(bit);
+                imageBox1.Image = newImage;
+
+            }
+            else if (checkBox1.Checked == false)
+            {
+                imageBox1.Image = image;
+
             }
 
-            //Image<Bgr, Byte> newImage = 0;
-            //imageBox1.Image = newImage;
+            
+
         }
     }
 }

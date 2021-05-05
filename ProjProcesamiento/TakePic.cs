@@ -70,7 +70,7 @@ namespace ProjProcesamiento
 
             //Load haarcascades for face detection
             face = new HaarCascade("haarcascade_frontalface_default.xml");
-            //eye = new HaarCascade("haarcascade_eye.xml");
+ 
             try
             {
                 //Load of previus trainned faces and labels for each image
