@@ -186,6 +186,7 @@ namespace ProjProcesamiento
             this.imageBox1.Location = new System.Drawing.Point(25, 47);
             this.imageBox1.Name = "imageBox1";
             this.imageBox1.Size = new System.Drawing.Size(426, 311);
+            this.imageBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageBox1.TabIndex = 2;
             this.imageBox1.TabStop = false;
             // 

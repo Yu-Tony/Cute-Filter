@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Emgu.CV;
+using Emgu.CV.Structure;
+using Emgu.CV.CvEnum;
+using System.IO;
+
 namespace ProjProcesamiento
 {
     public partial class Confirm : Form
     {
-        Bitmap image;
-        public Confirm(Bitmap imagePar)
+        Image<Bgr, Byte> image;
+        public Confirm(Image<Bgr, Byte> imagePar)
         {
             InitializeComponent();
             image = imagePar;
-            pictureBox1.Image = image;
+            imageBox1.Image = image;
         }
 
         private void btnYesUse_Click(object sender, EventArgs e)
@@ -44,6 +49,11 @@ namespace ProjProcesamiento
         private void Confirm_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void Confirm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

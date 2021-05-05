@@ -26,17 +26,43 @@ namespace ProjProcesamiento
     public partial class TakePic : Form
     {
         /*-----------------------------------------VARIABLES----------------------------------*/
-        Image<Bgr, Byte> currentFrame, pic;
+        /// <summary>
+        /// IMAGEN DE COLOR
+        /// </summary>
+        Image<Bgr, Byte> currentFrame;
+        /// <summary>
+        /// VARIABLE QUE CAPTURA IMAGENES DE UNA CAMARA O ARCHIVO DE VIDEO
+        /// </summary>
         Capture grabber;
+        /// <summary>
+        /// ALGORITMO DE DETECCION DE OBJETOS USADO PARA IDENTIFICAR ROSOTROS EN UNA IMAGEN O VIDEO
+        /// </summary>
         HaarCascade face;
+        /// <summary>
+        /// IMAGEN GRIS
+        /// </summary>
         Image<Gray, byte> gray = null;
+        /// <summary>
+        /// LISTA DE IMAGENES GRIS DE LAS PERSONAS
+        /// </summary>
         List<Image<Gray, byte>> trainingImages = new List<Image<Gray, byte>>();
+        /// <summary>
+        /// LISTA DE NOMBRES DE LAS PERSONAS GUARDADOS
+        /// </summary>
         List<string> labels = new List<string>();
+        /// <summary>
+        /// LISTA DE NOMBRES A MOSTRAR EN EL LABEL4 "PERSONAS:"
+        /// </summary>
         List<string> NamePersons = new List<string>();
+        /// <summary>
+        /// INT PARA CONTAR LOS ROSTROS QUE SE HAN GUARDADO
+        /// </summary>
         int ContTrain, NumLabels, t;
         string name, names = null;
         Image<Gray, byte> result, TrainedFace = null;
         MCvFont font = new MCvFont(FONT.CV_FONT_HERSHEY_TRIPLEX, 0.5d, 0.5d);
+
+        FilterInfoCollection filterInfoCollection;
         /*-----------------------------------------FUNCIONES----------------------------------*/
         public TakePic()
         {
@@ -69,25 +95,15 @@ namespace ProjProcesamiento
             }
         }
 
-        /// <summary>
-        /// <list type="bullet">
-        /// <item>
-        /// <description>CARGA LA PANTALLA</description>
-        /// </item>
-        /// <item>
-        /// <description>CARGA TODAS LAS CAMARAS DISPONIBLES Y LAS MUESTRA EN UN COMBOBOX</description>
-        /// </item>
-        /// <item>
-        /// <description>INICIALIZA EL MOTION DETECTOR http://www.aforgenet.com/framework/features/motion_detection_2.0.html
-        ///</description>
-        /// </item>
-        /// </list>
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void TakePic_Load(object sender, EventArgs e)
         {
-       
+            //LISTAR DISPOSITIVOS DE ENTRADA
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in filterInfoCollection)
+            {
+                cmboCameras.Items.Add(filterInfo.Name);
+            }
+            cmboCameras.SelectedIndex = 0;
 
         }
 
@@ -96,11 +112,11 @@ namespace ProjProcesamiento
 
 
             //Initialize the capture device
-            grabber = new Capture();
+            grabber = new Capture(cmboCameras.SelectedIndex);
+            //Initialize the capture device
             grabber.QueryFrame();
             //Initialize the FrameGraber event
             Application.Idle += new EventHandler(FrameGrabber);
-            button1.Enabled = false;
 
 
         }
@@ -108,10 +124,12 @@ namespace ProjProcesamiento
         private void btnStopCam_Click(object sender, EventArgs e)
         {
 
-            /* if (videoSourcePlayer1.IsRunning == true)
-             {
-                 videoSourcePlayer1.SignalToStop();
-             }*/
+            Application.Idle -= new EventHandler(FrameGrabber);
+            grabber.Dispose();
+            grabber = null;
+            imageBox1.Image = null;
+            label3.Text = "0";
+            label4.Text = "";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -173,16 +191,19 @@ namespace ProjProcesamiento
 
         private void btnTakePic_Click(object sender, EventArgs e)
         {
-           /* pic = grabber.QueryFrame();
+            currentFrame = grabber.QueryFrame().Resize(imageBox1.Width, imageBox1.Height, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
+
+            Application.Idle -= new EventHandler(FrameGrabber);
             grabber.Dispose();
-       
+            grabber = null;
+            imageBox1.Image = null;
+            label3.Text = "0";
+            label4.Text = "";
+            NamePersons.Add("");
 
-            Confirm openForm = new Confirm(img);
+            Confirm openForm = new Confirm(currentFrame);
             openForm.Show();
-            Visible = false;*/
-
-            //pic = true;
-            //TakePicture();
+            Visible = false;
 
         }
 
@@ -195,11 +216,17 @@ namespace ProjProcesamiento
 
         private void TakePic_FormClosing(object sender, FormClosingEventArgs e)
         {
-            /*if(videoSourcePlayer1.IsRunning==true)
+            Application.Idle -= new EventHandler(FrameGrabber);
+            if (grabber != null)
             {
-                videoSourcePlayer1.SignalToStop();
+                grabber.Dispose();
+                grabber = null;
+
             }
-            */
+            imageBox1.Image = null;
+            label3.Text = "0";
+            label4.Text = "";
+
             System.Windows.Forms.Application.Exit();
 
         }
@@ -212,7 +239,7 @@ namespace ProjProcesamiento
 
 
             //Get the current frame form capture device
-            currentFrame = grabber.QueryFrame().Resize(320, 240, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
+            currentFrame = grabber.QueryFrame().Resize(imageBox1.Width, imageBox1.Height, Emgu.CV.CvEnum.INTER.CV_INTER_CUBIC);
 
             //Convert it to Grayscale
             gray = currentFrame.Convert<Gray, Byte>();
@@ -260,25 +287,6 @@ namespace ProjProcesamiento
                 //Set the number of faces detected on the scene
                 label3.Text = facesDetected[0].Length.ToString();
 
-                /*
-                //Set the region of interest on the faces
-
-                gray.ROI = f.rect;
-                MCvAvgComp[][] eyesDetected = gray.DetectHaarCascade(
-                   eye,
-                   1.1,
-                   10,
-                   Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING,
-                   new Size(20, 20));
-                gray.ROI = Rectangle.Empty;
-
-                foreach (MCvAvgComp ey in eyesDetected[0])
-                {
-                    Rectangle eyeRect = ey.rect;
-                    eyeRect.Offset(f.rect.X, f.rect.Y);
-                    currentFrame.Draw(eyeRect, new Bgr(Color.Blue), 2);
-                }
-                 */
 
             }
             t = 0;

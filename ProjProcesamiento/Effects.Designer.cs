@@ -29,8 +29,8 @@ namespace ProjProcesamiento
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Effects));
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
@@ -43,18 +43,10 @@ namespace ProjProcesamiento
             this.btnDiscardChngs = new System.Windows.Forms.Button();
             this.btnSaveChngs = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.imageBox1 = new Emgu.CV.UI.ImageBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(38, 46);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(426, 311);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
             // 
             // groupBox1
             // 
@@ -153,6 +145,7 @@ namespace ProjProcesamiento
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Enfoque";
             this.checkBox1.UseVisualStyleBackColor = true;
+
             // 
             // btnDiscardChngs
             // 
@@ -196,33 +189,40 @@ namespace ProjProcesamiento
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // imageBox1
+            // 
+            this.imageBox1.Location = new System.Drawing.Point(34, 46);
+            this.imageBox1.Name = "imageBox1";
+            this.imageBox1.Size = new System.Drawing.Size(426, 311);
+            this.imageBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageBox1.TabIndex = 2;
+            this.imageBox1.TabStop = false;
+            // 
             // Effects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(484, 561);
+            this.Controls.Add(this.imageBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSaveChngs);
             this.Controls.Add(this.btnDiscardChngs);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Effects";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pick Your Filter";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Effects_FormClosing);
             this.Load += new System.EventHandler(this.Effects_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox9;
@@ -235,5 +235,6 @@ namespace ProjProcesamiento
         private System.Windows.Forms.Button btnDiscardChngs;
         private System.Windows.Forms.Button btnSaveChngs;
         private System.Windows.Forms.Button button1;
+        private Emgu.CV.UI.ImageBox imageBox1;
     }
 }
