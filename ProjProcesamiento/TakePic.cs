@@ -97,6 +97,8 @@ namespace ProjProcesamiento
 
         private void TakePic_Load(object sender, EventArgs e)
         {
+            btnStopCam.Enabled = false;
+
             //LISTAR DISPOSITIVOS DE ENTRADA
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)
@@ -117,7 +119,8 @@ namespace ProjProcesamiento
             grabber.QueryFrame();
             //Initialize the FrameGraber event
             Application.Idle += new EventHandler(FrameGrabber);
-
+            btnStartCam.Enabled = false;
+            btnStopCam.Enabled = true;
 
         }
 
@@ -130,6 +133,8 @@ namespace ProjProcesamiento
             imageBox1.Image = null;
             label3.Text = "0";
             label4.Text = "";
+            btnStartCam.Enabled = true;
+            btnStopCam.Enabled = false;
         }
 
         private void label3_Click(object sender, EventArgs e)

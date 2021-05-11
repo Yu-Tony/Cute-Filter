@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Emgu.CV;
+using Emgu.CV.Structure;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,10 +52,19 @@ namespace ProjProcesamiento
            
 
             openFileDialog1.Filter = "Image Files(*.JPG;*.PNG)|*.JPG;*.PNG";
-          if (openFileDialog1.ShowDialog()==DialogResult.OK)
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                //openFileDialog1.FileName
+
+
+                Image<Bgr, Byte> image = new Image<Bgr, byte>(openFileDialog1.FileName);
+
+                Effects openForm = new Effects(image);
+                openForm.Show();
+                Visible = false;
             }
+
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

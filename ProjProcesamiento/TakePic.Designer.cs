@@ -54,7 +54,7 @@ namespace ProjProcesamiento
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(20, 377);
+            this.label1.Location = new System.Drawing.Point(24, 405);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace ProjProcesamiento
             // cmboCameras
             // 
             this.cmboCameras.FormattingEnabled = true;
-            this.cmboCameras.Location = new System.Drawing.Point(72, 374);
+            this.cmboCameras.Location = new System.Drawing.Point(76, 402);
             this.cmboCameras.Name = "cmboCameras";
             this.cmboCameras.Size = new System.Drawing.Size(121, 21);
             this.cmboCameras.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace ProjProcesamiento
             this.btnStopCam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStopCam.FlatAppearance.BorderSize = 0;
             this.btnStopCam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStopCam.Location = new System.Drawing.Point(25, 486);
+            this.btnStopCam.Location = new System.Drawing.Point(29, 566);
             this.btnStopCam.Name = "btnStopCam";
             this.btnStopCam.Size = new System.Drawing.Size(133, 63);
             this.btnStopCam.TabIndex = 3;
@@ -89,7 +89,7 @@ namespace ProjProcesamiento
             this.btnStartCam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartCam.FlatAppearance.BorderSize = 0;
             this.btnStartCam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStartCam.Location = new System.Drawing.Point(318, 486);
+            this.btnStartCam.Location = new System.Drawing.Point(322, 566);
             this.btnStartCam.Name = "btnStartCam";
             this.btnStartCam.Size = new System.Drawing.Size(133, 63);
             this.btnStartCam.TabIndex = 4;
@@ -103,7 +103,7 @@ namespace ProjProcesamiento
             this.btnTakePic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTakePic.FlatAppearance.BorderSize = 0;
             this.btnTakePic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTakePic.Location = new System.Drawing.Point(199, 468);
+            this.btnTakePic.Location = new System.Drawing.Point(203, 548);
             this.btnTakePic.Name = "btnTakePic";
             this.btnTakePic.Size = new System.Drawing.Size(77, 76);
             this.btnTakePic.TabIndex = 5;
@@ -114,7 +114,7 @@ namespace ProjProcesamiento
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(252, 377);
+            this.label2.Location = new System.Drawing.Point(231, 435);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 13);
             this.label2.TabIndex = 8;
@@ -126,7 +126,7 @@ namespace ProjProcesamiento
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.label3.Location = new System.Drawing.Point(365, 371);
+            this.label3.Location = new System.Drawing.Point(353, 430);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(20, 24);
             this.label3.TabIndex = 9;
@@ -137,7 +137,7 @@ namespace ProjProcesamiento
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(431, 374);
+            this.pictureBox2.Location = new System.Drawing.Point(414, 427);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@ namespace ProjProcesamiento
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.label4.Location = new System.Drawing.Point(312, 411);
+            this.label4.Location = new System.Drawing.Point(295, 470);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 14;
@@ -175,7 +175,7 @@ namespace ProjProcesamiento
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(252, 411);
+            this.label5.Location = new System.Drawing.Point(232, 472);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 15;
@@ -183,7 +183,7 @@ namespace ProjProcesamiento
             // 
             // imageBox1
             // 
-            this.imageBox1.Location = new System.Drawing.Point(25, 47);
+            this.imageBox1.Location = new System.Drawing.Point(29, 60);
             this.imageBox1.Name = "imageBox1";
             this.imageBox1.Size = new System.Drawing.Size(426, 311);
             this.imageBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -194,7 +194,7 @@ namespace ProjProcesamiento
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(12, 415);
+            this.label6.Location = new System.Drawing.Point(231, 401);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 17;
@@ -202,7 +202,7 @@ namespace ProjProcesamiento
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 408);
+            this.textBox1.Location = new System.Drawing.Point(293, 398);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(107, 20);
             this.textBox1.TabIndex = 16;
@@ -210,7 +210,7 @@ namespace ProjProcesamiento
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Location = new System.Drawing.Point(185, 408);
+            this.button2.Location = new System.Drawing.Point(406, 395);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 24);
             this.button2.TabIndex = 18;
@@ -223,7 +223,7 @@ namespace ProjProcesamiento
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(484, 561);
+            this.ClientSize = new System.Drawing.Size(484, 661);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);

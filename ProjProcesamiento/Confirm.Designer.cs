@@ -44,7 +44,7 @@ namespace ProjProcesamiento
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(109, 385);
+            this.pictureBox2.Location = new System.Drawing.Point(110, 405);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(243, 68);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -58,7 +58,7 @@ namespace ProjProcesamiento
             this.btnNoUse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNoUse.FlatAppearance.BorderSize = 0;
             this.btnNoUse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNoUse.Location = new System.Drawing.Point(174, 508);
+            this.btnNoUse.Location = new System.Drawing.Point(171, 558);
             this.btnNoUse.Name = "btnNoUse";
             this.btnNoUse.Size = new System.Drawing.Size(106, 51);
             this.btnNoUse.TabIndex = 2;
@@ -72,7 +72,7 @@ namespace ProjProcesamiento
             this.btnYesUse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnYesUse.FlatAppearance.BorderSize = 0;
             this.btnYesUse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnYesUse.Location = new System.Drawing.Point(174, 451);
+            this.btnYesUse.Location = new System.Drawing.Point(171, 501);
             this.btnYesUse.Name = "btnYesUse";
             this.btnYesUse.Size = new System.Drawing.Size(106, 51);
             this.btnYesUse.TabIndex = 3;
@@ -108,7 +108,7 @@ namespace ProjProcesamiento
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(484, 561);
+            this.ClientSize = new System.Drawing.Size(484, 661);
             this.Controls.Add(this.imageBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnYesUse);

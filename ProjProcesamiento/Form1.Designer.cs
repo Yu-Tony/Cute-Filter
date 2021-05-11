@@ -45,7 +45,7 @@ namespace ProjProcesamiento
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(95, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(89, 143);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(273, 265);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -56,7 +56,7 @@ namespace ProjProcesamiento
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(72, 18);
+            this.pictureBox2.Location = new System.Drawing.Point(70, 54);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(328, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -71,7 +71,7 @@ namespace ProjProcesamiento
             this.btnTakePicture.FlatAppearance.BorderColor = System.Drawing.Color.Sienna;
             this.btnTakePicture.FlatAppearance.BorderSize = 0;
             this.btnTakePicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTakePicture.Location = new System.Drawing.Point(139, 360);
+            this.btnTakePicture.Location = new System.Drawing.Point(132, 436);
             this.btnTakePicture.Name = "btnTakePicture";
             this.btnTakePicture.Size = new System.Drawing.Size(174, 61);
             this.btnTakePicture.TabIndex = 2;
@@ -86,7 +86,7 @@ namespace ProjProcesamiento
             this.btnUploadPicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUploadPicture.FlatAppearance.BorderSize = 0;
             this.btnUploadPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadPicture.Location = new System.Drawing.Point(172, 419);
+            this.btnUploadPicture.Location = new System.Drawing.Point(165, 503);
             this.btnUploadPicture.Name = "btnUploadPicture";
             this.btnUploadPicture.Size = new System.Drawing.Size(174, 61);
             this.btnUploadPicture.TabIndex = 3;
@@ -100,7 +100,7 @@ namespace ProjProcesamiento
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(214, 486);
+            this.btnExit.Location = new System.Drawing.Point(207, 570);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(174, 61);
             this.btnExit.TabIndex = 4;
@@ -130,7 +130,7 @@ namespace ProjProcesamiento
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(484, 561);
+            this.ClientSize = new System.Drawing.Size(484, 661);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUploadPicture);
