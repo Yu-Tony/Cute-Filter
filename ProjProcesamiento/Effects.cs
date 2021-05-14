@@ -64,6 +64,9 @@ namespace ProjProcesamiento
 
         /// <summary>
         /// BINARY FILTER
+        /// 
+        /// Los pixeles que tengan un promedio de rgb arriba 127 se hacen negro
+        /// Si no, se hacen blanco 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -225,6 +228,139 @@ namespace ProjProcesamiento
                 imageBox1.Image = image;
             }
 
+        }
+
+        /// <summary>
+        /// Filtro sepia
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+            //https://dyclassroom.com/csharp-project/how-to-convert-a-color-image-into-sepia-image-in-csharp-using-visual-studio
+            if (checkBox9.Checked)
+            {
+                Bitmap bmp = image.ToBitmap();
+
+
+                //get image dimension
+                int width = bmp.Width;
+                int height = bmp.Height;
+
+                //color of pixel
+                Color p;
+
+                //sepia
+                for (int y = 0; y < height; y++)
+                {
+                    for (int x = 0; x < width; x++)
+                    {
+                        //get pixel value
+                        p = bmp.GetPixel(x, y);
+
+                        //extract pixel component ARGB
+                        int a = p.A;
+                        int r = p.R;
+                        int g = p.G;
+                        int b = p.B;
+
+                        //calculate temp value
+                        int tr = (int)(0.393 * r + 0.769 * g + 0.189 * b);
+                        int tg = (int)(0.349 * r + 0.686 * g + 0.168 * b);
+                        int tb = (int)(0.272 * r + 0.534 * g + 0.131 * b);
+
+                        //set new RGB value
+                        if (tr > 255)
+                        {
+                            r = 255;
+                        }
+                        else
+                        {
+                            r = tr;
+                        }
+
+                        if (tg > 255)
+                        {
+                            g = 255;
+                        }
+                        else
+                        {
+                            g = tg;
+                        }
+
+                        if (tb > 255)
+                        {
+                            b = 255;
+                        }
+                        else
+                        {
+                            b = tb;
+                        }
+
+                        //set the new RGB value in image pixel
+                        bmp.SetPixel(x, y, Color.FromArgb(a, r, g, b));
+                    }
+                }
+
+                Image<Bgr, Byte> newImage = new Image<Bgr, Byte>(bmp);
+                imageBox1.Image = newImage;
+
+            }
+            else if (checkBox9.Checked == false)
+            {
+                imageBox1.Image = image;
+            }
+        }
+
+        /// <summary>
+        /// FILTRO NEGATIVO
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            //https://dyclassroom.com/csharp-project/how-to-convert-a-color-image-into-a-negative-image-in-csharp-using-visual-studio
+            if (checkBox4.Checked)
+            {
+                Bitmap bmp = image.ToBitmap();
+
+
+                //get image dimension
+                int width = bmp.Width;
+                int height = bmp.Height;
+
+                //negative
+                for (int y = 0; y < height; y++)
+                {
+                    for (int x = 0; x < width; x++)
+                    {
+                        //get pixel value
+                        Color p = bmp.GetPixel(x, y);
+
+                        //extract ARGB value from p
+                        int a = p.A;
+                        int r = p.R;
+                        int g = p.G;
+                        int b = p.B;
+
+                        //find negative value
+                        r = 255 - r;
+                        g = 255 - g;
+                        b = 255 - b;
+
+                        //set new ARGB value in pixel
+                        bmp.SetPixel(x, y, Color.FromArgb(a, r, g, b));
+                    }
+                }
+
+                Image<Bgr, Byte> newImage = new Image<Bgr, Byte>(bmp);
+                imageBox1.Image = newImage;
+
+            }
+            else if (checkBox4.Checked == false)
+            {
+                imageBox1.Image = image;
+            }
         }
     }
 }

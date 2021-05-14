@@ -53,9 +53,9 @@ namespace ProjProcesamiento
             this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Location = new System.Drawing.Point(38, 387);
+            this.groupBox1.Location = new System.Drawing.Point(34, 387);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(402, 109);
+            this.groupBox1.Size = new System.Drawing.Size(402, 116);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
@@ -65,20 +65,22 @@ namespace ProjProcesamiento
             this.checkBox9.AutoSize = true;
             this.checkBox9.Location = new System.Drawing.Point(260, 28);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(103, 17);
+            this.checkBox9.Size = new System.Drawing.Size(53, 17);
             this.checkBox9.TabIndex = 6;
-            this.checkBox9.Text = "Escala de grises";
+            this.checkBox9.Text = "Sepia";
             this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Location = new System.Drawing.Point(260, 51);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(76, 17);
+            this.checkBox4.Size = new System.Drawing.Size(69, 17);
             this.checkBox4.TabIndex = 5;
-            this.checkBox4.Text = "Suavizado";
+            this.checkBox4.Text = "Negativo";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox3
             // 

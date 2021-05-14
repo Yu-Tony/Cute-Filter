@@ -71,5 +71,25 @@ namespace ProjProcesamiento
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            string formats = "Videos Files |  *.avi; *.mp4; ";
+
+            openFileDialog.Filter = formats;
+            openFileDialog.Title = "Please select a video file.";
+            openFileDialog.ShowDialog();
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+
+            EffectsVideo openForm = new EffectsVideo(openFileDialog.FileName);
+            openForm.Show();
+            Visible = false;
+            }
+
+        }
     }
 }

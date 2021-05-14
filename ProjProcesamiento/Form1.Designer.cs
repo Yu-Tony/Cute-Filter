@@ -37,6 +37,7 @@ namespace ProjProcesamiento
             this.btnExit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +72,7 @@ namespace ProjProcesamiento
             this.btnTakePicture.FlatAppearance.BorderColor = System.Drawing.Color.Sienna;
             this.btnTakePicture.FlatAppearance.BorderSize = 0;
             this.btnTakePicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTakePicture.Location = new System.Drawing.Point(132, 436);
+            this.btnTakePicture.Location = new System.Drawing.Point(89, 414);
             this.btnTakePicture.Name = "btnTakePicture";
             this.btnTakePicture.Size = new System.Drawing.Size(174, 61);
             this.btnTakePicture.TabIndex = 2;
@@ -86,7 +87,7 @@ namespace ProjProcesamiento
             this.btnUploadPicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUploadPicture.FlatAppearance.BorderSize = 0;
             this.btnUploadPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadPicture.Location = new System.Drawing.Point(165, 503);
+            this.btnUploadPicture.Location = new System.Drawing.Point(122, 468);
             this.btnUploadPicture.Name = "btnUploadPicture";
             this.btnUploadPicture.Size = new System.Drawing.Size(174, 61);
             this.btnUploadPicture.TabIndex = 3;
@@ -100,7 +101,7 @@ namespace ProjProcesamiento
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(207, 570);
+            this.btnExit.Location = new System.Drawing.Point(224, 588);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(174, 61);
             this.btnExit.TabIndex = 4;
@@ -125,12 +126,23 @@ namespace ProjProcesamiento
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(179, 535);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(155, 47);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(484, 661);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUploadPicture);
@@ -158,6 +170,7 @@ namespace ProjProcesamiento
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

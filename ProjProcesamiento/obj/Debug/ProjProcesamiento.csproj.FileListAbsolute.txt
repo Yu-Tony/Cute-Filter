@@ -101,3 +101,4 @@ C:\Users\Nahom\OneDrive\Escritorio\Proj Anterior\ProjProcesamiento\obj\Debug\Pro
 C:\Users\Nahom\OneDrive\Escritorio\Proj Anterior\ProjProcesamiento\obj\Debug\ProjProcesamiento.csproj.CopyComplete
 C:\Users\Nahom\OneDrive\Escritorio\Proj Anterior\ProjProcesamiento\obj\Debug\ProjProcesamiento.exe
 C:\Users\Nahom\OneDrive\Escritorio\Proj Anterior\ProjProcesamiento\obj\Debug\ProjProcesamiento.pdb
+C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\obj\Debug\ProjProcesamiento.EffectsVideo.resources

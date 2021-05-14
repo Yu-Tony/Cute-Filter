@@ -115,6 +115,12 @@
     <Compile Include="Effects.Designer.cs">
       <DependentUpon>Effects.cs</DependentUpon>
     </Compile>
+    <Compile Include="EffectsVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EffectsVideo.Designer.cs">
+      <DependentUpon>EffectsVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Effects.resx">
       <DependentUpon>Effects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EffectsVideo.resx">
+      <DependentUpon>EffectsVideo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
