@@ -46,7 +46,7 @@ namespace ProjProcesamiento
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(89, 143);
+            this.pictureBox1.Location = new System.Drawing.Point(89, 111);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(273, 265);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -57,7 +57,7 @@ namespace ProjProcesamiento
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(70, 54);
+            this.pictureBox2.Location = new System.Drawing.Point(70, 41);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(328, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -72,7 +72,7 @@ namespace ProjProcesamiento
             this.btnTakePicture.FlatAppearance.BorderColor = System.Drawing.Color.Sienna;
             this.btnTakePicture.FlatAppearance.BorderSize = 0;
             this.btnTakePicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTakePicture.Location = new System.Drawing.Point(89, 414);
+            this.btnTakePicture.Location = new System.Drawing.Point(114, 382);
             this.btnTakePicture.Name = "btnTakePicture";
             this.btnTakePicture.Size = new System.Drawing.Size(174, 61);
             this.btnTakePicture.TabIndex = 2;
@@ -87,7 +87,7 @@ namespace ProjProcesamiento
             this.btnUploadPicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUploadPicture.FlatAppearance.BorderSize = 0;
             this.btnUploadPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadPicture.Location = new System.Drawing.Point(122, 468);
+            this.btnUploadPicture.Location = new System.Drawing.Point(147, 448);
             this.btnUploadPicture.Name = "btnUploadPicture";
             this.btnUploadPicture.Size = new System.Drawing.Size(174, 61);
             this.btnUploadPicture.TabIndex = 3;
@@ -101,11 +101,12 @@ namespace ProjProcesamiento
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(224, 588);
+            this.btnExit.Location = new System.Drawing.Point(249, 581);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(174, 61);
             this.btnExit.TabIndex = 4;
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // button1
             // 
@@ -128,11 +129,15 @@ namespace ProjProcesamiento
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(179, 535);
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(187, 515);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 47);
+            this.button2.Size = new System.Drawing.Size(183, 61);
             this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

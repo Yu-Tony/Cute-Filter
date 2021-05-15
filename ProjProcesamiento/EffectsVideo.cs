@@ -39,6 +39,7 @@ namespace ProjProcesamiento
 
         private void EffectsVideo_Load(object sender, EventArgs e)
         {
+            button5.Enabled = true;
             checkBox1.Enabled = false;
             checkBox2.Enabled = false;
             checkBox3.Enabled = false;
@@ -58,11 +59,11 @@ namespace ProjProcesamiento
         {
             //https://stackoverflow.com/questions/29058980/emgu-cv-cant-play-video
 
+            button5.Enabled = false;
+            //Frame Rate
 
-                //Frame Rate
-               
-           
-                My_Time.Tick += new EventHandler(My_Timer_Tick);
+
+            My_Time.Tick += new EventHandler(My_Timer_Tick);
                 My_Time.Start();
 
             if(_capture==null)
@@ -341,6 +342,10 @@ namespace ProjProcesamiento
         {
             if (checkBox1.Checked)
             {
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+                checkBox9.Checked = false;
                 My_Time.Tick -= new EventHandler(My_Timer_Tick);
                 My_Time.Tick += new EventHandler(BinaryEffect);
                 My_Time.Start();
@@ -358,6 +363,10 @@ namespace ProjProcesamiento
         {
             if (checkBox2.Checked)
             {
+                checkBox1.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+                checkBox9.Checked = false;
                 My_Time.Tick -= new EventHandler(My_Timer_Tick);
                 My_Time.Tick += new EventHandler(GrayEffect);
                 My_Time.Start();
@@ -375,6 +384,10 @@ namespace ProjProcesamiento
         {
             if (checkBox3.Checked)
             {
+                checkBox2.Checked = false;
+                checkBox1.Checked = false;
+                checkBox4.Checked = false;
+                checkBox9.Checked = false;
                 My_Time.Tick -= new EventHandler(My_Timer_Tick);
                 My_Time.Tick += new EventHandler(MeanEffect);
                 My_Time.Start();
@@ -392,6 +405,10 @@ namespace ProjProcesamiento
         {
             if (checkBox9.Checked)
             {
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+                checkBox1.Checked = false;
                 My_Time.Tick -= new EventHandler(My_Timer_Tick);
                 My_Time.Tick += new EventHandler(SepiaEffect);
                 My_Time.Start();
@@ -409,6 +426,10 @@ namespace ProjProcesamiento
         {
             if (checkBox4.Checked)
             {
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox1.Checked = false;
+                checkBox9.Checked = false;
                 My_Time.Tick -= new EventHandler(My_Timer_Tick);
                 My_Time.Tick += new EventHandler(NegativeEffect);
                 My_Time.Start();
@@ -420,6 +441,23 @@ namespace ProjProcesamiento
                 My_Time.Start();
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            My_Time.Tick -= new EventHandler(My_Timer_Tick);
+            My_Time.Tick -= new EventHandler(BinaryEffect);
+            My_Time.Tick -= new EventHandler(GrayEffect);
+            My_Time.Tick -= new EventHandler(SepiaEffect);
+            My_Time.Tick -= new EventHandler(NegativeEffect);
+
+            My_Time = null;
+            _capture = null;
+            bit = null;
+            Form1 openForm = new Form1();
+            openForm.Show();
+            Visible = false;
         }
     }
 }

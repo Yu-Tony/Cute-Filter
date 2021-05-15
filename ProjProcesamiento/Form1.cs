@@ -51,7 +51,7 @@ namespace ProjProcesamiento
         {
            
 
-            openFileDialog1.Filter = "Image Files(*.JPG;*.PNG)|*.JPG;*.PNG";
+            openFileDialog1.Filter = "Image Files(*.JPG;)|*.JPG;";
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -75,7 +75,7 @@ namespace ProjProcesamiento
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            string formats = "Videos Files |  *.avi; *.mp4; ";
+            string formats = "Videos Files | *.mp4; ";
 
             openFileDialog.Filter = formats;
             openFileDialog.Title = "Please select a video file.";
@@ -90,6 +90,11 @@ namespace ProjProcesamiento
             Visible = false;
             }
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

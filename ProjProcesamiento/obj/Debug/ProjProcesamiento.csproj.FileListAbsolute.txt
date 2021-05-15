@@ -19,7 +19,6 @@ C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\Proj
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\obj\Debug\ProjProcesamiento.Effects.resources
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\obj\Debug\ProjProcesamiento.Manual.resources
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\Manual.pdf
-C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\obj\Debug\ProjProcesamiento.csprojAssemblyReference.cache
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\AForge.Controls.dll
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\AForge.Imaging.dll
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\AForge.Vision.dll
@@ -30,7 +29,6 @@ C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\Proj
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\AForge.Math.xml
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\haarcascade_frontalface_alt_tree.xml
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\ZedGraph.dll
-C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\Emgu.CV.UI.xml
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\ZedGraph.xml
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\de\ZedGraph.resources.dll
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\es\ZedGraph.resources.dll
@@ -49,8 +47,6 @@ C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\Proj
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\OpenTK.GLControl.dll
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\OpenTK.xml
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\OpenTK.GLControl.xml
-C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\Emgu.CV.xml
-C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\bin\Debug\Emgu.Util.xml
 C:\Users\Nahom\OneDrive\Escritorio\Proj Anterior\ProjProcesamiento\bin\Debug\Manual.pdf
 C:\Users\Nahom\OneDrive\Escritorio\Proj Anterior\ProjProcesamiento\bin\Debug\haarcascade_frontalface_alt_tree.xml
 C:\Users\Nahom\OneDrive\Escritorio\Proj Anterior\ProjProcesamiento\bin\Debug\ProjProcesamiento.exe.config
@@ -102,3 +98,4 @@ C:\Users\Nahom\OneDrive\Escritorio\Proj Anterior\ProjProcesamiento\obj\Debug\Pro
 C:\Users\Nahom\OneDrive\Escritorio\Proj Anterior\ProjProcesamiento\obj\Debug\ProjProcesamiento.exe
 C:\Users\Nahom\OneDrive\Escritorio\Proj Anterior\ProjProcesamiento\obj\Debug\ProjProcesamiento.pdb
 C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\obj\Debug\ProjProcesamiento.EffectsVideo.resources
+C:\Users\Nahom\OneDrive\Escritorio\Procesamiento\Proyecto\ProjProcesamiento\ProjProcesamiento\obj\Debug\ProjProcesamiento.csprojAssemblyReference.cache

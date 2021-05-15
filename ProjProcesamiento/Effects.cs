@@ -47,7 +47,7 @@ namespace ProjProcesamiento
             //MOSTRAR DIALOG
             sf.ShowDialog();
             //ASEGURAR QUE SEA UNA RUTA VALIDA
-            if (sf.FileName != null || sf.FileName != "")
+            if (sf.FileName != null || sf.FileName != " " || sf.FileName != "")
             {
                 //VARIABLE PARA LA IMAGE
                 imageBox1.Image.Save(sf.FileName);
@@ -75,8 +75,13 @@ namespace ProjProcesamiento
 
             if (checkBox1.Checked)
             {
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox4.Checked = false;
+                checkBox9.Checked = false;
+
                 //ref https://dyclassroom.com/csharp-project/how-to-convert-a-color-image-into-grayscale-image-in-csharp-using-visual-studio
-              
+
                 Bitmap bit = image.ToBitmap();
 
                 //get image dimension
@@ -136,6 +141,10 @@ namespace ProjProcesamiento
         {
             if (checkBox2.Checked)
             {
+                checkBox4.Checked = false;
+                checkBox3.Checked = false;
+                checkBox1.Checked = false;
+                checkBox9.Checked = false;
                 Bitmap bit = image.ToBitmap();
 
                 //get image dimension
@@ -187,9 +196,15 @@ namespace ProjProcesamiento
         /// <param name="e"></param>
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
+            
             //Info https://stackoverflow.com/questions/42696560/why-is-an-image-needed-to-be-converted-into-greyscale-before-passed-to-median-fi
             if (checkBox3.Checked)
             {
+
+                checkBox2.Checked = false;
+                checkBox4.Checked = false;
+                checkBox1.Checked = false;
+                checkBox9.Checked = false;
 
                 Bitmap bit = image.ToBitmap();
                 Bitmap temp = new Bitmap(bit.Width, bit.Height);
@@ -237,9 +252,15 @@ namespace ProjProcesamiento
         /// <param name="e"></param>
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
+
             //https://dyclassroom.com/csharp-project/how-to-convert-a-color-image-into-sepia-image-in-csharp-using-visual-studio
             if (checkBox9.Checked)
             {
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox1.Checked = false;
+                checkBox4.Checked = false;
+
                 Bitmap bmp = image.ToBitmap();
 
 
@@ -322,6 +343,11 @@ namespace ProjProcesamiento
             //https://dyclassroom.com/csharp-project/how-to-convert-a-color-image-into-a-negative-image-in-csharp-using-visual-studio
             if (checkBox4.Checked)
             {
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
+                checkBox1.Checked = false;
+                checkBox9.Checked = false;
+
                 Bitmap bmp = image.ToBitmap();
 
 
@@ -361,6 +387,13 @@ namespace ProjProcesamiento
             {
                 imageBox1.Image = image;
             }
+        }
+
+        private void btnDiscardChngs_Click(object sender, EventArgs e)
+        {
+            Form1 openForm = new Form1();
+            openForm.Show();
+            Visible = false;
         }
     }
 }

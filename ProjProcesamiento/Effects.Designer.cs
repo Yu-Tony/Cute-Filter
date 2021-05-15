@@ -37,7 +37,7 @@ namespace ProjProcesamiento
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.btnDiscardChngs = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnSaveChngs = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.imageBox1 = new Emgu.CV.UI.ImageBox();
@@ -115,18 +115,19 @@ namespace ProjProcesamiento
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // btnDiscardChngs
+            // btnBack
             // 
-            this.btnDiscardChngs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDiscardChngs.BackgroundImage")));
-            this.btnDiscardChngs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDiscardChngs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDiscardChngs.FlatAppearance.BorderSize = 0;
-            this.btnDiscardChngs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscardChngs.Location = new System.Drawing.Point(34, 591);
-            this.btnDiscardChngs.Name = "btnDiscardChngs";
-            this.btnDiscardChngs.Size = new System.Drawing.Size(173, 48);
-            this.btnDiscardChngs.TabIndex = 2;
-            this.btnDiscardChngs.UseVisualStyleBackColor = true;
+            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(34, 591);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(173, 48);
+            this.btnBack.TabIndex = 2;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnDiscardChngs_Click);
             // 
             // btnSaveChngs
             // 
@@ -175,7 +176,7 @@ namespace ProjProcesamiento
             this.Controls.Add(this.imageBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSaveChngs);
-            this.Controls.Add(this.btnDiscardChngs);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Effects";
@@ -197,7 +198,7 @@ namespace ProjProcesamiento
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button btnDiscardChngs;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnSaveChngs;
         private System.Windows.Forms.Button button1;
         private Emgu.CV.UI.ImageBox imageBox1;
