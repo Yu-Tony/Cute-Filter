@@ -77,7 +77,7 @@ Para probar el reconocimiento de rostros es necesario contar con una camara cone
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-###Guia
+### Guia
 
 
 
